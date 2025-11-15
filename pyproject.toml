@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evalflow"
+version = "1.0.0"
+description = "Reference implementation of an evaluation analytics library."
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=1.5.0",
+    "matplotlib>=3.5.0",
+    "numpy>=1.23.0",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["evalflow/tests"]
